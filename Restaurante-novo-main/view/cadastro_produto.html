@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="../view/cadastro_style/cadastro.css">
+    <link rel="stylesheet" href="../view/tela-inicial/styles.css">
+    <link rel="stylesheet" href="../view/tela-inicial/header.css">
+    <link rel="stylesheet" href="../view/tela-inicial/footer.css">
+    <link rel="stylesheet" href="../view/styles-login.css/teste-login.css">
+    <link rel="stylesheet" href="../view/tela-carrinho/carrinho.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="../view/tela_inicio.html">
+                <img id="nav_logo" src="../assets/logobella.png" alt="logo">
+                </a>
+            <ul id = "nav_list">
+                <li class = "nav-item active">
+                    <a href="#home">Cadastro de Produtos</a>
+                </li>
+            </ul>
+
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/tela_cardapio.html">Peça aqui</a>
+                    
+                </button>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id = "mobile_nav_list">
+                <li class = "nav-item">
+                    <a href="#home">Carrinho</a>
+                </li>
+            </ul>
+
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/tela_cardapio.html">Peça aqui</a>
+                    
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="product-list-title">Cadastro de Produtos</h1>
+
+        <!-- Formulário de Adicionar Produto -->
+        <form id="product-form">
+            <label for="product-category">Categoria</label>
+            <div class="custom-select">
+                <select id="product-category" >
+                    <option value="" disabled selected>Selecione uma categoria</option>
+                    <option value="Fritas">Fritas</option>
+                    <option value="Hambúrguer">Hambúrguer</option>
+                    <option value="Bebidas">Bebidas</option>
+                </select>
+            </div>
+            
+            <label for="product-name">Nome do Produto</label>
+            <div class="input-field">
+                <input type="text" id="product-name" placeholder="Digite o nome do produto" >
+            </div>
+            <label for="product-price">Preço</label>
+            <div class="input-field">
+                <input type="number" id="product-price" placeholder="Digite o preço" >
+            </div>
+            <label for="product-description">Descrição</label>
+            <div class="input-field-textarea">
+                <textarea id="product-description" rows="4" placeholder="Digite a descrição do produto"></textarea>
+            </div>
+            <div class="btn-group">
+                <button type="submit" id="btn-add" class="btn-default">Adicionar Produto</button>
+
+            <button type="button" class="btn-default" id="btn-select">Selecionar</button>
+            <button type="button" class="btn-default" id="btn-update">Atualizar</button>
+            
+            <button type="button" class="btn-default" id="btn-remove">Remover</button>
+
+        </div>
+        </form>
+
+        <h2 class="product-list-title">Lista de Produtos</h2>
+        <!-- Tabela de Produtos -->
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os produtos adicionados aparecerão aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div id="footer_linha"></div>
+
+        <div id="footer_items">
+            <span id="copyright">
+                © 2024 - Todos os direitos reservados
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+<script type="module" src="../model/CRUD.js">
+</script> 
+</body>
+<script src="../controller/cadastro_produto/cadastro.js"></script>
+<script src="../controller/tela-inicio-js/script.js"></script>
+<script src="../controller/cardapio-carrinho/carrinho.js"></script>
+
+
+</html>

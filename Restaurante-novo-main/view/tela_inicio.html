@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/tela-inicial/styles.css">
+    <link rel="stylesheet" href="../view/tela-inicial/header.css">
+    <link rel="stylesheet" href="../view/tela-inicial/home.css">
+    <link rel="stylesheet" href="../view/tela-inicial/menu.css">
+    <link rel="stylesheet" href="../view/tela-inicial/testimonials.css">
+    <link rel="stylesheet" href="../view/tela-inicial/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bella Burguer</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="../view/tela_inicio.html">
+            <img id="nav_logo" src="../../assets/logobella.png" alt="logo">
+            </a>
+
+            <ul id = "nav_list">
+                <li class = "nav-item active">
+                    <a href="#home">Home</a>
+                </li>
+                <li class = "nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class = "nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/tela_cardapio.html">Peça aqui</a>
+                    
+                </button>
+                <button class="btn-default"><a href="../view/cadastro_produto.html">Cadastre Produto</a>
+                    
+                </button>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id = "mobile_nav_list">
+                <li class = "nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class = "nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class = "nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/tela_cardapio.html">Peça aqui</a>
+                    
+                </button>
+                <button class="btn-default"><a href="../view/cadastro_produto.html">Cadastre Produto</a>
+                    
+                </button>
+            </div>
+
+        </div>
+    </header>
+    <main id = "content">
+      <section id = "home">
+        <div class="shape">
+
+        </div>   
+        <div id="cta">
+
+          <h1 class = "title">Seja bem-vindo a <span>Bella Burguer</span></h1>
+
+          <p class = "description">É um prazer receber você aqui no nosso cantinho dedicado aos amantes de hambúrgueres de verdade!</p>
+
+            <div id="cta_buttons">
+                <a href="../view/tela_cardapio.html" class = "btn-default">Ver Cardápio</a>
+                <a href="tel: +999999999" id="phone_button"><button class = "btn-default"><i class ="fa-solid fa-phone"></i>
+                </button>
+                (51) 99999-9999
+                </a>
+            </div>
+            <div class="social-media-buttons">
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+          
+        </div>
+        <div id="banner">
+            <img src="../../assets/burguer-shape.png" alt="pizza" id="shape_banner">
+        </div>
+      </section>
+
+      <section id="menu">
+        <h2 class = "section-title">Cardápio</h2>
+        <h3 class="section-subtitle">Nossos melhores pizzas</h3>
+
+        <div id="dishes">
+            <div class="dish">
+                
+
+                <img src="../assets/burguer1.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Rodeio 
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, um suculento hambúrguer de pura carne bovina, cheddar fatiado, molho barbecue, 6 deliciosas onion rings, tomate, alface e maionese.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 22,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Rodeio', 22.99,'../assets/burguer1.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer2.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Barbecue Bacon 
+                </h3>
+
+                <span class="dish-description">
+                    Adicionamos no nosso WHOPPER® um delicioso molho barbecue e fatias super crocantes de bacon. Resultado: Perfeição!
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 24,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Barbecue Bacon', 24.99,'../assets/burguer2.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer3.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Furioso 
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, um suculento hambúrguer de pura carne bovina, cheddar fatiado, bacon, alface, tomate, maionese, pimenta-jalapeño, onion rings e um delicioso molho furioso à base de mostarda e pimenta.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 27,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Furioso', 27.99,'../assets/burguer3.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+        
+                <img src="../assets/burguer4.png" alt="Hamburguer" class="dish-image">
+        
+                <h3 class="dish-title">
+                    Mega Stacker Cheddar 3.0 
+                </h3>
+        
+                <span class="dish-description">
+                    O Mega Stacker Cheddar está de volta! Um verdadeiro exagero de cheddar. Só quem é louco por queijo tem coragem de encarar esse gigante. E você, tem?
+                </span>
+        
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+        
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 35,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Mega Stacker Cheddar 3.0', 35.99,'../assets/burguer4.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id = "testimonials">
+        <img src="../assets/masterchef.png" class = "testimonials_chef" alt="Master Chef">
+
+        <div id="testimonials_content">
+            <h2 class="section-title">
+                Depoimentos
+            </h2>
+            <h3 class="section-subtitle">
+                o que os clientes falam sobre nós
+            </h3>
+
+            <div id="feedbacks">
+                <div class="feedback">
+                    <img src="../assets/avatar1.png" alt="Avatar" class="feedback-avatar">
+               
+
+                    <div class="feedback-content">
+                        <p>
+                            Gilberto Souza
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </p>
+                        <p>Amei a comida, hamburguer bem recheado!
+
+                        </p>
+                    </div>
+                </div> 
+
+                <div class="feedback">
+                    <img src="../assets/avatar2.png" alt="Avatar" class="feedback-avatar">
+               
+
+                    <div class="feedback-content">
+                        <p>
+                            Paulo Queiroz
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </p>
+                        <p>Ótima qualidade de comida, gostei muito!
+
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
+            <button class = "btn-default">
+                Ver mais Avaliações
+            </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <div id="footer_linha"></div>
+
+        <div id="footer_items">
+            <span id="copyright">
+                © 2024 - Todos os direitos reservados
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../controller/tela-inicio-js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../controller/cardapio-carrinho/cardapio.js"></script>
+</body>
+</html>

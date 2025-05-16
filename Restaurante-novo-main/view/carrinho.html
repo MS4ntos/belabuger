@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/tela-inicial/styles.css">
+    <link rel="stylesheet" href="../view/tela-inicial/header.css">
+    <link rel="stylesheet" href="../view/tela-carrinho/carrinho.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="../view/tela_inicio.html">
+                <img id="nav_logo" src="../assets/logobella.png" alt="logo">
+                </a>
+            <ul id = "nav_list">
+                <li class = "nav-item active">
+                    <a href="#home">Carrinho</a>
+                </li>
+            </ul>
+
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/tela_cardapio.html">Peça aqui</a>
+                    
+                </button>
+                <button class="btn-default"><a href="../view/cadastro_produto.html">Cadastre Produto</a>
+                    
+                </button>
+            </div>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id = "mobile_nav_list">
+                <li class = "nav-item">
+                    <a href="#home">Carrinho</a>
+                </li>
+            </ul>
+
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/tela_cardapio.html">Peça aqui</a>
+                    
+                </button>
+                <button class="btn-default"><a href="../view/cadastro_produto.html">Cadastre Produto</a>
+                    
+                </button>
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </header>
+
+
+
+    <div class="content">
+        <section class="section-carrinho">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                        <th>-</th>
+                    </tr>
+                </thead>
+                <tbody id="carrinho-body">
+                    <!-- Os produtos serão carregados aqui via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+        <aside>
+            <div class="box">
+                <header class="header-finalizar">Resumo da compra</header>
+                <div class="info">
+                    <div><span>Sub-Total</span><span id="subtotal">R$ 0,00</span></div>
+                    <div><span>Frete</span><span id="frete">R$ 15,00</span></div>
+                    <div><button>Adicionar cupom de Desconto<i class='bx bx-right-arrow-alt'></i></button></div>
+                </div>
+                <footer>
+                    <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+                </footer>
+            </div>
+        </aside>
+    </div>
+
+
+</body>
+
+<script src="../model/firebase-init.js"></script>
+<script src="../controller/tela-inicio-js/script.js"></script>
+<script src="../controller/cardapio-carrinho/carrinho.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"> </script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"> </script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"> </script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js"> </script>
+
+</html>

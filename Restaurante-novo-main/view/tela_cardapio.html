@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/tela-inicial/styles.css">
+    <link rel="stylesheet" href="../view/tela-inicial/header.css">
+    <link rel="stylesheet" href="../view/tela-inicial/menu.css">
+    <link rel="stylesheet" href="../view/tela-inicial/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cardápio</title>
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <a href="../view/tela_inicio.html">
+            <img id="nav_logo" src="../assets/logobella.png" alt="logo">
+            </a>
+            <ul id = "nav_list">
+                <li class = "nav-item active">
+                    <a href="#home">Cardápio</a>
+                </li>
+            </ul>
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/cadastro_produto.html">Cadastre Produto</a>
+                    
+                </button>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id = "mobile_nav_list">
+                <li class = "nav-item">
+                    <a href="#home">Home</a>
+                </li>
+               
+            </ul>
+
+            <div class="btn-inicio">
+                <button class="btn-default"><a href="../view/cadastro_produto.html">Cadastre Produto</a>
+                    
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu">
+        <h2 class = "section-title">Cardápio</h2>
+        <h3 class="section-subtitle">Nossos melhores pizzas</h3>
+
+        <div id="dishes">
+            <div class="dish">
+                
+
+                <img src="../assets/burguer1.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Rodeio 
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, um suculento hambúrguer de pura carne bovina, cheddar fatiado, molho barbecue, 6 deliciosas onion rings, tomate, alface e maionese.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 22,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Rodeio', 22.99,'../assets/burguer1.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer2.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Barbecue Bacon 
+                </h3>
+
+                <span class="dish-description">
+                    Adicionamos no nosso WHOPPER® um delicioso molho barbecue e fatias super crocantes de bacon. Resultado: Perfeição!
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 24,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Barbecue Bacon', 24.99,'../assets/burguer2.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer3.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Furioso 
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, um suculento hambúrguer de pura carne bovina, cheddar fatiado, bacon, alface, tomate, maionese, pimenta-jalapeño, onion rings e um delicioso molho furioso à base de mostarda e pimenta.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 27,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Furioso', 27.99,'../assets/burguer3.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+        
+                <img src="../assets/burguer4.png" alt="Hamburguer" class="dish-image">
+        
+                <h3 class="dish-title">
+                    Mega Stacker Cheddar 3.0 
+                </h3>
+        
+                <span class="dish-description">
+                    O Mega Stacker Cheddar está de volta! Um verdadeiro exagero de cheddar. Só quem é louco por queijo tem coragem de encarar esse gigante. E você, tem?
+                </span>
+        
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+        
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 35,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Mega Stacker Cheddar 3.0', 35.99,'../assets/burguer4.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="dishes">
+            <div class="dish">
+                
+
+                <img src="../assets/burguer5.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Mega Stacker Atômico 3.0 
+                </h3>
+
+                <span class="dish-description">
+                    Todo mundo sabe que o Mega Stacker 3.0 tem três carnes, mas agora ele também pode ter três camadas de queijo e bacon. E aí, você encara?
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 35,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Mega Stacker Atômico 3.0', 35.99,'../assets/burguer5.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer6.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Duplo 
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, dois suculentos hambúrgueres de pura carne bovina, duas fatias de cheddar, quatro fatias de picles, alface, tomate, cebola, maionese e ketchup.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 31,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Duplo', 31.99,'../assets/burguer6.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer7.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    King Costela 
+                </h3>
+
+                <span class="dish-description">
+                    Sanduíche no pão de brioche com hambúrguer de carne bovina grelhada, 2 fatias de queijo sabor cheddar, carne de costela bovina desfiada, chutney de cebola roxa, cebola crispy, 3 anéis de onion rings e maionese de alho.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 28,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('King Costela', 28.99,'../assets/burguer7.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+        
+                <img src="../assets/burguer8.png" alt="Hamburguer" class="dish-image">
+        
+                <h3 class="dish-title">
+                    BK Cheddar
+                </h3>
+        
+                <span class="dish-description">
+                    Chegou o BK® Cheddar, com o novo molho cremoso sabor queijo cheddar do BK®, carne alta e suculenta, cebola salteada e pão de brioche.
+                </span>
+        
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+        
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 21,99</h4>
+                    <button class = "btn-default">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="dishes">
+            <div class="dish">
+                
+
+                <img src="../assets/burguer9.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Whopper Jr. 
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, um saboroso hambúrguer de pura carne bovina, uma fatia de queijo derretido, duas fatias de picles, alface, tomate, cebola, maionese e ketchup.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 24,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Whopper Jr.', 24.99,'../assets/burguer9.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer10.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Chicken Júnior 
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, um delicioso peito de frango empanado, alface e maionese.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 21,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Chicken Júnior', 21.99,'../assets/burguer10.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/burguer11.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Chicken Duplo
+                </h3>
+
+                <span class="dish-description">
+                    Pão com gergelim, dois deliciosos filés de peito de frango empanado, cheddar fatiado, maionese e alface. É de dar água na boca!
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 35,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Chicken Duplo', 35.99,'../assets/burguer11.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+        
+                <img src="../assets/burguer12.png" alt="Hamburguer" class="dish-image">
+        
+                <h3 class="dish-title">
+                    CBK 
+                </h3>
+        
+                <span class="dish-description">
+                    Novo sanduíche feito com peito de frango empanado, bacon e cebola crispy, além de maionese, queijo cheddar fatiado, alface e pão de brioche.
+                </span>
+        
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+        
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 31,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('CBK', 31.99,'../assets/burguer12.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <h2 class = "section-title" id = "section-title-fritas">Fritas</h2>
+        <div id="dishes">
+            <div class="dish">
+                
+
+                <img src="../assets/frita1.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Batata Suprema Catupiry 
+                </h3>
+
+                <span class="dish-description">                    
+                Nossa deliciosas e crocantes batatas com Catupiry® e bacon em cubos.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 22,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Batata Suprema Catupiry', 22.99,'../assets/frita1.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/frita2.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Balde de Batata
+                </h3>
+
+                <span class="dish-description">
+                    Nossas crocantes e irresistíveis batatas fritas agora na versão balde!
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 9,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Balde de Batata', 9.99,'../assets/frita2.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+
+                <img src="../assets/frita3.png" alt="Hamburguer" class="dish-image">
+
+                <h3 class="dish-title">
+                    Batata Furiosa
+                </h3>
+
+                <span class="dish-description">
+                    Batata frita com molho Furioso à base de mostarda e pimenta e padacinhos de bacon.
+                </span>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 13,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Batata Furiosa', 13.99,'../assets/frita3.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="dish">
+                
+        
+                <img src="../assets/frita4.png" alt="Hamburguer" class="dish-image">
+        
+                <h3 class="dish-title">
+                    Trio Supremo
+                </h3>
+        
+                <span class="dish-description">
+                    Pra que escolher um só, se você pode ter todos? Batata frita com molho sabor cheddar, bacon, BK® Franguinho e Onion Rings com Molho Furioso à base de mostarda e pimenta.
+                </span>
+        
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(500+)</span>
+                </div>
+        
+                <div class="dish-price">
+                    <h4 id = "price_produto">R$ 12,99</h4>
+                    <button class = "btn-default" onclick="adicionarAoCarrinho('Trio Supremo', 12.99,'../assets/frita4.png')">
+                        <i class = "fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div id="footer_linha"></div>
+
+        <div id="footer_items">
+            <span id="copyright">
+                © 2024 - Todos os direitos reservados
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="../controller/cardapio-carrinho/cardapio.js">
+</script>
+<script src="../controller/tela-inicio-js/script.js"></script>
+<script>
+    import { getDatabase, ref, set, child, update, remove } 
+from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
+</script>
+</html>

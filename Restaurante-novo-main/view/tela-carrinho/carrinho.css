@@ -1,0 +1,160 @@
+.content{
+    display: flex;
+}
+.section-carrinho{
+   flex: 1;
+}
+table{
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+}
+button{
+   cursor: pointer;
+}
+.qty{
+   display: inline-flex;
+   height: 30px;
+   padding: 0 0;
+   align-items: center;
+   justify-content: space-around;
+   min-width: 60px;
+   background: #eee;
+   border-radius: 20px;
+   overflow: hidden;
+}
+.qty button{
+   background: transparent;
+   border: 0;
+   display: flex;
+   align-items: center;
+   padding: 0 10px;
+   font-size: 20px;
+   height: 100%;
+}
+.qty button:hover{
+   background: #ddd;
+}
+.qty span{
+   margin: 0 10px;
+}
+thead tr{
+    border-bottom: 3px solid #eee;
+}
+thead tr th{
+   text-align: left;
+   padding-bottom: 10px ;
+   text-transform: uppercase;
+   color: #666;
+}
+.product{
+   display: flex;
+   align-items: center;
+}
+.product img{
+   border-radius: 6px;
+   width: 100px;
+}
+.info-product{
+   margin-left: 20px;
+}
+.name{
+font-size: 20px;
+margin-bottom: 10px;
+}
+.color{
+   color: #666;
+}
+tbody tr td{
+   padding: 30px 0; 
+}
+tbody tr {
+   border-bottom: 3px solid #eee;
+}
+
+tbody tr:last-child{
+   border: 0;
+}
+.remove{
+   font-size: 20px;
+   border: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #eee;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+}
+.remove:hover{
+   background: #ddd;
+}
+.box{
+margin-bottom: 15px;
+border: 1px solid #ccc;
+background: #eee;
+color: #222;
+}
+aside button{
+color: white;
+border: 0;
+padding: 15px 0;
+background: green;
+display: block;
+width: 90%;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 16px;
+transition: all 0.3s;
+}
+aside button:hover{
+background:#37a751;
+}
+
+.header-finalizar{
+   padding: 15px 20px;
+   font-size: 18px;
+}
+.content{
+ padding: 100px;
+}
+.info{
+   padding: 20px;
+   font-size: 16px;
+}
+.footer-carrinho{
+padding: 20px;
+background: #ddd;
+font-size: 18px;
+display: flex;
+justify-content: space-between;
+}
+.info div{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 10px;
+   color: #555;
+}
+.info div:last-child{
+   margin: 0;
+}
+
+.info div button{
+   color: #28a745;
+   background: transparent;
+   border: 0;
+   display: flex;
+   align-items: center;
+}
+.info div button i{
+font-size: 16px;
+
+}
+.aside-carrinho{
+   margin-left: 30px;
+}
+#finalizar-compra{
+   background: #28a745;
+   color: #fff;
+   width: 100%;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../view/styles-login.css/teste-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+    <main id="container">
+        <form id="login_form">
+            <div id="form_header">
+                <h1>Login</h1>
+                <i id="mode_icon" class="fa-solid fa-moon"></i>
+            </div>
+
+            <div id="social_media">
+                <a href="#">
+                    <img src="../assets/facebook-icon.png" alt="Facebook">
+                </a>
+
+                <a href="#">
+                    <img src="../assets/google-icon.png" alt="Google logo">
+                </a>
+                
+                <a href="#">
+                    <img src="../assets/github-icon.png" alt="GitHub">
+                </a>
+            </div>
+
+            <div id="inputs">
+                <div class="input-box">
+                    <label for="email">
+                        E-mail
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+                        </div>
+                        <div class="error" id="email-invalid-error">Email é inválido</div>
+                        <div class="error" id="email-required-error">Email é obrigatório</div>
+                    </label>
+                </div>
+                
+                <div class="input-box">
+                    <label for="password">
+                        Password
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" id="password" name="password" placeholder="Senha" onchange="onChangePassword()"/>
+                            <i 
+                            class="fa-solid fa-eye" 
+                            id="toggle-password" 
+                            style="cursor: pointer;" 
+                            onclick="toggleSenha('password', 'toggle-password')"
+                        ></i>
+                        </div>
+                        <div class="error" id="password-required-error">Senha é obrigatória!</div>
+                        <div class="error" id="password-min-length-error">Senha deve ter no mínimo 6 caracteres!</div>
+                    </label>
+                    
+                    <div id="forgot_password">
+                        <button type="button" class="clear" onclick="recoverPassword()" disabled="true" id="recover-password-button">
+                            Forgot your password?
+                    </button>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="password-confirm">
+                        Password
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="confirmPassword" id="confirmPassword" name="confirmPassword" placeholder="Confirmar Senha" onchange="onChangePassword()"/>
+                            <i 
+                            class="fa-solid fa-eye" 
+                            id="toggle-confirmPassword" 
+                            style="cursor: pointer;" 
+                            onclick="toggleSenha('confirmPassword', 'toggle-confirmPassword')"
+                        ></i>
+                        </div>
+                        <div class="error" id="password-doesnt-match-error">Senha e Confirmar senha tem que serem iguais!</div>
+                        <div class="error" id="password-min-length-error">Senha deve ter no mínimo 6 caracteres!</div>
+                    </label>
+                    
+                    <div id="forgot_password">
+                        <button type="button" class="clear" onclick="recoverPassword()" onchange="onChangeConfirmPassword()" disabled="true" id="recover-password-button">
+                            Forgot your password?
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="login-button" disabled="true" href="../view/tela_login.html">
+                Login
+            </button>
+            <button type="button" onclick="register()" id="register_button" disabled="true">
+                Registar
+            </button>
+        </form>
+    </main>
+</body>
+<script src="../model/registro.js"></script>
+<script src="../controller/login-js/validations.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+<script src="../model/firebase-init.js"></script>
+</html>
